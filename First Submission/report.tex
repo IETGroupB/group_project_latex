@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{parskip}
+
+% The following parameters seem to provide a reasonable page setup.
+\topmargin 0.0cm
+\oddsidemargin 0.2cm
+\textwidth 16cm 
+\textheight 21cm
+\footskip 1.0cm
+
+
+%The next command sets up an environment for the abstract to your paper.
+\newenvironment{sciabstract}{%
+\begin{quote} \bf}
+{\end{quote}}
+
+\newcounter{lastnote}
+\newenvironment{scilastnote}{%
+\setcounter{lastnote}{\value{enumiv}}%
+\addtocounter{lastnote}{+1}%
+\begin{list}%
+{\arabic{lastnote}.}
+{\setlength{\leftmargin}{.22in}}
+{\setlength{\labelsep}{.5em}}}
+{\end{list}}
+
+
+
+\title{\textit{CS7038 Group B}\hspace{0.75cm}\\\line(1, 0){300}
+} 
+\author
+{\vspace{-1.2cm}\\ Guan, Yaffy Koyo, Saloni Sharma \& Jeremiah Dunn\\\line(1, 0){300}}
+\date{}
+
+\begin{document} 
+
+\maketitle 
+
+\section{Main Themes}
+
+\input{sections/themes}
+
+\section{Gameplay Mechanics}
+
+
+
+\input{sections/mechanics}
+
+
+
+\section{Admin/Planning}
+
+\input{sections/admin}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% sample figure code
+%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}
+%\centering
+%\includegraphics[scale=0.4, trim = 0cm 0cm 0cm 0cm]{images/test}
+%\label{fig:some_label}
+%\caption{some figure}
+%\end{figure}
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
