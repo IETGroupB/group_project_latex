@@ -1,0 +1,25 @@
+
+\section{Level Generation}
+
+The game will use elements of procedural generation to create levels. To do this, first a grid of \textit{rooms} is created as shown in figure~\ref{fig:sub1:level}. A random position on the top of the grid is chosen to be the starting room. From here there is a probability of stepping left/right or down. If the stepping algorithm reaches a wall it will automatically step down. At the bottom of the grid the probability of stepping down is replaced with the probability of creating a level end.
+
+\begin{figure}[ht]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[scale=0.2, trim = 0cm 0cm 0cm 2cm]{images/4x4}
+  \caption{Room grid}
+  \label{fig:sub1:level}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[scale=0.2, trim = 0cm 0cm 0cm 2cm]{images/16x16}	
+  \caption{Different rooms, hashed areas represent floor/roof}
+  \label{fig:sub2:level}
+\end{subfigure}
+\caption{Level Generation}
+\label{fig:level_gen}
+\end{figure}
+
+
+After the room grid is created the individual rooms are populated with pre-existing room tiles. To get a basic version of the game running only the four room tiles show in figure~\ref{fig:sub2:level} would be needed with solid rooms for the rooms off the solution path. Individual rooms will be tile based and will be stored in text files which the game will read in and then populate.
